@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pl" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="ATMAZE_favicon.png" />
+  <title>Wsparcie – TalkTogether</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--bs-body-color);
+      background-color: var(--bs-body-bg);
+      padding-bottom: 3rem;
+    }
+    .container {
+      max-width: 800px;
+    }
+    h1, h2 {
+      font-weight: 600;
+    }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    .logo {
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+    }
+    .switchers {
+      display: flex;
+      gap: 0.75rem;
+    }
+    .switch-btn {
+      min-width: 90px;
+      height: 38px;
+      padding: 0 1rem;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+    hr {
+      margin: 2rem 0;
+    }
+    a {
+      color: var(--bs-primary);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .switchers .btn-outline-secondary {
+      border-color: #0d6efd !important;
+      color: #0d6efd !important;
+    }
+    .switchers .btn-outline-secondary:hover {
+      text-decoration: none !important;
+      background-color: #0d6efd !important;
+      color: #fff !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container py-5">
+
+    <div class="top-bar">
+      <img src="atmaze_logo_privacy_policy_page.png" alt="Logo aplikacji" class="logo" />
+      <div class="switchers">
+        <a href="support.html" class="btn btn-outline-secondary switch-btn">EN</a>
+        <button class="btn btn-outline-secondary switch-btn" id="themeToggle">🌙 Ciemny</button>
+      </div>
+    </div>
+
+    <h1 class="mb-4 text-center">Wsparcie – TalkTogether</h1>
+
+    <p><strong>Ostatnia aktualizacja: 31 marca 2026</strong></p>
+
+    <hr>
+
+    <h2>Kontakt</h2>
+    <p>W sprawach wsparcia technicznego, problemów z aplikacją oraz pytań dotyczących prywatności:</p>
+    <ul>
+      <li>Email: <a href="mailto:atmazegames@gmail.com">atmazegames@gmail.com</a></li>
+      <li>Firma: ATMAZE</li>
+    </ul>
+
+    <h2>Czas odpowiedzi</h2>
+    <p>Staramy się odpowiadać w ciągu <strong>2–5 dni roboczych</strong>.</p>
+
+    <h2>Co zawrzeć w zgłoszeniu</h2>
+    <p>Aby szybciej rozwiązać problem, podaj:</p>
+    <ul>
+      <li>Model urządzenia</li>
+      <li>Wersję iOS</li>
+      <li>Wersję aplikacji (np. 1.0.0)</li>
+      <li>Krótki opis problemu</li>
+      <li>Dokładne kroki prowadzące do błędu</li>
+      <li>Zrzut ekranu lub nagranie (jeśli dostępne)</li>
+    </ul>
+
+    <h2>Żądania dotyczące prywatności</h2>
+    <p>W sprawach związanych z danymi osobowymi skontaktuj się z nami:</p>
+    <ul>
+      <li><a href="mailto:atmazegames@gmail.com">atmazegames@gmail.com</a></li>
+    </ul>
+
+    <h2>Informacja dla App Store Connect</h2>
+    <p>Ta strona jest przeznaczona do publikacji jako <strong>Support URL</strong> w App Store Connect.</p>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const htmlTag = document.documentElement;
+
+    themeToggle.addEventListener('click', () => {
+      const current = htmlTag.getAttribute('data-bs-theme');
+      const next = current === 'light' ? 'dark' : 'light';
+      htmlTag.setAttribute('data-bs-theme', next);
+      themeToggle.textContent = next === 'dark' ? '☀️ Jasny' : '🌙 Ciemny';
+    });
+  </script>
+
+</body>
+</html>
